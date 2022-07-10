@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url(css-pseudo-classes-elements.jpg)
+        }
+        header{
+            width: 100%;
+            margin-top: 0px;
+            padding-top: 0px;
+            text-align: center;
+            color: rgb(255, 0, 0);
+            font-size: 25px;
+        }
+        nav{
+            background-color: rgb(48, 96, 151);
+            position: sticky;
+            top: 0px;
+            width: 100%;
+            font-size: 20px;
+            padding-right: 20px;
+        }
+        ul.menu li{
+            list-style-type: none;
+            display: inline-block; 
+            position: relative;
+        }
+        ul.menu>li>a{
+            display: inline-block;
+            text-decoration: none;
+            padding: 20px;
+            margin: 10px;
+            color: rgb(255, 255, 255);
+            border: 1px solid rgb(5, 5, 5);
+            border-radius:8px 5px;
+        }
+        ul.sub>li>a{
+            display: inline-block;
+            padding: 4px;
+            margin: 2px;
+            width: 100px;
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            border: 1px solid rgb(5, 5, 5);
+            border-radius:5px 6px;
+            background-color: rgb(17, 103, 184);
+        }
+
+            ul.menu li a:hover{
+            background-color: rgb(248, 250, 164) ;
+            border-bottom: 2px solid red;
+            color: black;
+        }
+        ul.sub{
+            display: none;
+            position:absolute;
+            text-decoration: none;
+        }
+        ul.menu li:hover ul.sub{
+            display: block;
+            color: red;
+        }
+        ul.sub li{
+            display: block;
+            border-bottom: 1p solid red;
+            background-color: rgb(184, 173, 173);
+        }
+        .tarif-pseudo{
+            direction: rtl;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 20px;
+            padding: 10px;
+            margin: 10px;
+            column-count: 3;
+            column-rule-style: solid;
+            column-rule-color: blue
+        }
+        h2{
+            color: red;
+        }
+        .tarif-pseudo-1{
+            direction: rtl;
+            font-size: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Education: pseudo-classes</h1>
+    </header>
+    <nav class="nav">
+        <ul class="menu">
+            <li><a href="">Location pseudo-classes</a>
+            <ul class="sub" >
+                <li><a href="navbar/index-css-alink.html">:link</a></li>
+                <li><a href="navbar/index-css-visited.html">:visited</a></li>
+                <li><a href="navbar/index-css-target.html">:target</a></li>
+                <li><a href="navbar/index-css-target-within.html">:target-within</a></li>
+            </ul>
+            </li>
+            <li ><a href="">User action pseudo-classes</a>
+                <ul class="sub">
+                        <li><a href="navbar/index-css-hover.html">:hover</a></li>
+                        <li><a href="navbar/index-css-active.html">:active</a></li>
+                        <li><a href="navbar/index-css-focus.html">:focus</a></li>
+                        <li><a href="navbar/index-css-focus-visible.html">:focus-visible</a></li>
+                        <li><a href="navbar/index-css-focus-within.html">:focus-within</a></li>
+                        </ul>
+            </li>
+            <li ><a href="">The input pseudo-classes</a>
+                <ul class="sub">
+                    <li><a href="navbar/index-enabled.html">:enabled</a></li>
+                    <li><a href="navbar/index-desabled.html">:disabled</a></li>
+                    <li><a href="navbar/index-checked.html">:checked</a></li>
+                    <li><a href="navbar/index-in-range.html">:in-range</a></li>
+                </ul>
+                </li>
+                <li ><a href="">Tree-structural pseudo-classes</a>
+                <ul class="sub">
+                    <li><a href="navbar/index-css-empaty.html">:empty</a></li>
+                    <li><a href="navbar/index-css-nth-childd.html">:nth-child</a></li>
+                    <li><a href="navbar/index-nth-last-child.html">:nth-last-child</a></li>
+                    <li><a href="navbar/index-first-child.html">:first-child</a></li>
+                    <li><a href="navbar/index-last-child.html">:last-child</a></li>
+                    <li><a href="navbar/index-only-child.html">:only-child</a></li>
+                    <li><a href="navbar/index-nth-of-type.html">:nth-of-type</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Home</a></li>>
+
+        </ul>
+    </nav>
+    <div class="tarif-pseudo">
+        <h2> شبه کلاس ها (pseudo-class) در css</h2>
+        <p>
+            علاوه بر شبه عناصر (Pseudo-Elements) ، در طراحی سایت با css ، ویژگی دیگری نیز به نام شبه کلاس (pseudo-class) وجود دارند. در این بخش از آموزش css قصد داریم این ویژگی را برای شما کاربران عزیز شرح دهیم.
+        </p>
+        <p>شبه طبقات شبه کلاس CSS یک کلمه کلیدی است که به یک انتخابگر اضافه می شود که وضعیت خاصی از عنصر(های) انتخاب شده را مشخص می کند. به عنوان مثال، :hover را می توان برای تغییر رنگ دکمه زمانی که نشانگر کاربر روی آن قرار می گیرد، استفاده کرد.</p>
+        <p>کلاس‌های کاذب به شما این امکان را می‌دهند که یک سبک را به یک عنصر نه تنها در رابطه با محتوای درخت سند، بلکه در رابطه با عوامل خارجی مانند تاریخچه ناوبر (visited: بازدید شده)، وضعیت محتوای آن اعمال کنید. مانند :بر روی عناصر فرم خاص بررسی شده است)، یا موقعیت ماوس (مانند :hover، که به شما امکان می دهد بدانید که آیا ماوس روی یک عنصر قرار دارد یا خیر).
+            <p>نکته: برخلاف کلاس‌های کاذب، شبه عناصر می‌توانند برای استایل بخشیدن به بخش خاصی از یک عنصر استفاده شوند.</p>
+        </p>
+        <h2>شبه کلاس ها چه هستند؟</h2>
+        <p>یک شبه کلاس (pseudo-class) در طراحی سایت با css برای تعریف یک حالت خاص از یک عنصر استفاده می شود. برای مثال می توان از آن در طراحی سایت برای موارد زیر استفاده کرد.</p>
+        <p>شبه کلاس ها یا به انگلیسی Pseudo Class در CSS در واقع نوع دیگری از انتخابگرها هستن که برای تعریف یک حالت خاص از یک تگ می باشد، این حالت خاص که میگم مثلا موقع رفتن ماوس بروی یک تگ ، یا مثلا موقع فوکوس کردن بروی یک تگ و…</p>
+        <ul>
+            <li> تعیین سبک یک عنصر زمانی که کاربر، موس را بر روی آن عنصر قرار می دهد.</li>
+            <li> ایجاد سبک متفاوت بین لینک های دیده شده و لینک های بازدید نشده</li>
+            <li> ارائه سبک خاص به یک عنصر ، زمانی که بر روی آن تمرکز می شود</li>
+        </ul>
+    </div><hr>
+    <div class="tarif-pseudo-1">
+        <h2>انواع شبه کلاس </h2>
+        <ul>
+            <li>شبه کلاس های زبانی
+                <ul>
+                    <li>این شبه کلاس ها زبان سند را منعکس می کنند و انتخاب عناصر را بر اساس زبان یا جهت اسکریپت امکان پذیر می کنند</li>
+                </ul>
+            </li>
+            <li>شبه کلاس های مکان
+                <ul>
+                    <li>این شبه کلاس‌ها به پیوندها و عناصر هدفمند در سند جاری مربوط می‌شوند.</li>
+                </ul>
+            </li>
+            <li>شبه کلاس های اقدام کاربر
+                <ul>
+                    <li>این شبه کلاس ها برای اعمال نیاز به تعامل توسط کاربر دارند، مانند نگه داشتن نشانگر ماوس روی یک عنصر.</li>
+                </ul>
+            </li>
+            <li>شبه کلاس های زمانی بعدی
+                <ul>
+                    <li>این شبه کلاس‌ها هنگام مشاهده چیزی که زمان‌بندی دارد، مانند تراک شرح WebVTT اعمال می‌شود.</li>
+                </ul>
+            </li>
+            <li>شبه کلاس های حالت منبع
+                <ul>
+                    <li>این شبه کلاس‌ها برای رسانه‌هایی اعمال می‌شود که می‌توانند در حالتی قرار بگیرند که در آن به عنوان پخش توصیف شود، مانند ویدیو.</li>
+                </ul>
+            </li>
+            <li>شبه کلاس های ورودی
+                <ul>
+                    <li>این شبه کلاس‌ها به عناصر فرم مربوط می‌شوند و انتخاب عناصر را بر اساس ویژگی‌های HTML و وضعیتی که فیلد قبل و بعد از تعامل در آن قرار دارد، امکان‌پذیر می‌سازد.</li>
+                </ul>
+            </li>
+            <li>شبه طبقات ساختاری درختی
+                <ul>
+                    <li>این شبه کلاس ها به مکان یک عنصر در درخت سند مربوط می شود.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

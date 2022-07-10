@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url(css-pseudo-classes-elements.jpg)
+        }
+        header{
+            width: 100%;
+            margin-top: 0px;
+            padding-top: 0px;
+            text-align: center;
+            color: rgb(255, 0, 0);
+            font-size: 25px;
+        }
+        nav{
+            background-color: rgb(48, 96, 151);
+            position: sticky;
+            top: 0px;
+            width: 100%;
+            font-size: 20px;
+            padding-right: 20px;
+        }
+        ul.menu li{
+            list-style-type: none;
+            display: inline-block; 
+            position: relative;
+        }
+        ul.menu>li>a{
+            display: inline-block;
+            text-decoration: none;
+            padding: 20px;
+            margin: 10px;
+            color: rgb(255, 255, 255);
+            border: 1px solid rgb(5, 5, 5);
+            border-radius:8px 5px;
+        }
+        ul.sub>li>a{
+            display: inline-block;
+            padding: 4px;
+            margin: 2px;
+            width: 100px;
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            border: 1px solid rgb(5, 5, 5);
+            border-radius:5px 6px;
+            background-color: rgb(17, 103, 184);
+        }
+
+            ul.menu li a:hover{
+            background-color: rgb(248, 250, 164) ;
+            border-bottom: 2px solid red;
+            color: black;
+        }
+        ul.sub{
+            display: none;
+            position:fixed;
+            padding: 0px;
+            margin: 0px;
+            z-index: 1;
+
+        }
+        ul.menu li:hover ul.sub{
+            display: block;
+            color: red;
+        }
+        ul.sub li{
+            display: block;
+            border-bottom: 1p solid red;
+            background-color: rgb(184, 173, 173);
+        }
+        .div-active{
+            direction: rtl;
+            margin: 15px;
+            padding: 15px;
+            color: rgb(0, 0, 0);
+            border: 2px solid black;
+            width: 40%;
+            text-align: justify;
+            background-color: beige;
+            float: right;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display:inline-block;
+        }
+        .div-active1{
+            direction: rtl;
+            margin: 15px;
+            padding: 15px;
+            color: rgb(0, 0, 0);
+            border: 2px solid black;
+            width:5%;
+            text-align: center;
+            background-color: beige;
+            float: right;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display:inline-block;
+            position: relative;
+            top: 40px;
+        }
+        .div-active2{
+            direction:ltr;
+            margin: 15px;
+            padding: 15px;
+            height: 300px;
+            color: rgb(0, 0, 0);
+            border: 2px solid black;
+            width:35%;
+            text-align: justify;
+            background-color: beige;
+            float:right;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display:inline-block;
+        }
+        form :active{
+            color:red;
+        }
+        form button{
+            background: white;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Education: pseudo-classes</h1>
+    </header>
+    <nav class="nav">
+        <ul class="menu">
+            <li><a href="">Location pseudo-classes</a>
+            <ul class="sub" >
+                <li><a href="index-css-alink.html">:link</a></li>
+                <li><a href="index-css-visited.html">:visited</a></li>
+                <li><a href="index-css-target.html">:target</a></li>
+                <li><a href="index-css-target-within.html">:target-within</a></li>
+            </ul>
+            </li>
+            <li ><a href="">User action pseudo-classes</a>
+                <ul class="sub">
+                <li><a href="index-css-hover.html">:hover</a></li>
+                <li><a href="#">:active</a></li>
+                <li><a href="index-css-focus.html">:focus</a></li>
+                <li><a href="index-css-focus-visible.html">:focus-visible</a></li>
+                <li><a href="index-css-focus-within.html">:focus-within</a></li>
+                </ul>
+            </li>
+            <li ><a href="">The input pseudo-classes</a>
+                <ul class="sub">
+                    <li><a href="index-enabled.html">:enabled</a></li>
+                    <li><a href="index-desabled.html">:disabled</a></li>
+                    <li><a href="index-checked.html">:checked</a></li>
+                    <li><a href="index-in-range.html">:in-range</a></li>
+                </ul>
+                </li>
+                <li ><a href="">Tree-structural pseudo-classes</a>
+                <ul class="sub">
+                    <li><a href="index-css-empaty.html">:empty</a></li>
+                    <li><a href="index-css-nth-childd.html">:nth-child</a></li>
+                    <li><a href="index-nth-last-child.html">:nth-last-child</a></li>
+                    <li><a href="index-first-child.html">:first-child</a></li>
+                    <li><a href="index-nth-last-child.html">:last-child</a></li>
+                    <li><a href="index-only-child.html">:only-child</a></li>
+                    <li><a href="index-nth-of-type.html">:nth-of-type</a></li>
+                </ul>
+            </li>
+            <li><a href="../index-css.html">Home</a></li>
+        </ul>
+    </nav>
+    <div class="div-active">
+        <h2>active:</h2>
+       <P>زمانی مطابقت دارد که یک مورد توسط کاربر فعال می شود، برای مثال روی آن کلیک می شود.</P>
+       <P>شبه کلاس :active CSS نشان دهنده عنصری (مانند یک دکمه) است که توسط کاربر فعال می شود. هنگام استفاده از ماوس، "فعال سازی" معمولاً زمانی شروع می شود که کاربر دکمه اصلی ماوس را فشار می دهد.</P>
+       <P>شبه کلاس :active معمولاً روی عناصر a و button استفاده می شود. سایر اهداف متداول این شبه کلاس شامل عناصری است که در یک عنصر فعال وجود دارد، و عناصری را تشکیل می دهند که از طریق label مرتبط با آنها فعال می شوند.</P>
+       <p>سبک های تعریف شده توسط شبه کلاس :active توسط هر شبه کلاس مرتبط با پیوند بعدی (:link، :hover، یا :visited) که حداقل ویژگی برابری داشته باشد، لغو می شوند. برای استایل دهی مناسب به پیوندها، قانون :active را بعد از سایر قوانین مرتبط با پیوند، همانطور که توسط LVHA-order تعریف شده است قرار دهید: :link — :visited — :hover — :active.</p>
+    </div>
+    <div class="div-active1">
+        <h2>مثال&lArr;</h2>
+    </div>
+
+    <div class="div-active2">
+        <form>
+            <label for="my-button">My button: </label>
+            <button id="my-button" type="button">Try Clicking Me or My Label!</button>
+          </form>
+    </div>
+</body>
+</html>

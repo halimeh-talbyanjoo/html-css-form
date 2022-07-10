@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>maskanmeli</title>
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    body{
+        direction: rtl;
+        background-image: url(img/back1-asaid.jpg);
+    }
+    header{
+        background-image: url(img/back-header.jpg);
+        width: 100%;
+        height: 200px;
+        padding: 0px;
+        margin: 0px;
+    }
+    nav{
+        background-color:darkgrey;
+        position: relative;
+        bottom: 15px;
+        border: 1px solid darkgrey;
+        border-radius: 5px 5px;
+    }
+    ul.menu li{
+        display: inline-block;
+        padding: 5px;
+        list-style-type: none;
+    }
+    ul.menu li a:hover{
+        background-color: rgb(185, 179, 179);
+        border: 1px solid  rgb(136, 134, 134);
+        border-radius: 8px;
+    }
+    a{
+        padding: 10px 15px 15px 25px;
+        text-decoration: none;
+    }
+    input[type=text],input[type=number] ,input[type=password],input[type=email],input[type=date],input[type=subject],select{
+        padding: 5px;
+        border: 1px solid rgb(8, 8, 8);
+        border-radius: 7px 7px 5px 5px;
+        resize:vertical ;
+        width: 25%;
+    }
+    label{
+        display: inline-block;
+        padding: 10px 10px 15px 10px;
+    }
+    input[type=submit], input[type=reset]{
+        padding: 5px 30px 4px 25px;
+        border:none;
+        border-radius: 10px;
+        background-color: rgb(79, 10, 77);
+        color: white;
+        float: left;
+        cursor:pointer;
+    }
+    input[type=submit], input[type=reset]:hover{
+        background-color:red ;
+    }
+    .container{
+        background-image: url(img/back1-asaid1.jpg);
+        width: 50%;
+        padding: 25px;
+        margin-left: 200px;
+        margin-right: 350px;
+        border: 1px solid rgb(185, 179, 179);
+        border-radius: 4px 2px;
+        resize:vertical ;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 15px;
+        color: rgb(2, 2, 2);
+        
+    }
+    .col1{
+        float: right;
+        width: 25%;
+        margin-top: 6px;
+    }
+    .col2{
+        float: right;
+        width: 75%;
+        margin-top: 6px;
+    }
+    footer{
+        border: 1px solid burlywood;
+        border-radius: 8px 5px;
+        padding: 10px 20px 5px 20px;
+        background-color: rgb(165, 160, 158);
+        height: 50px;
+        text-align: center;
+    }
+    /* .row:after {
+        content: "dgdfgdfgdfg";
+        display: table;
+        clear:both;
+        margin: 6px;
+
+        background-color: red;
+    } */
+    .row::before {
+        content: "";
+        display: table;
+        clear:both;
+        margin: 6px;
+        background-color: red;
+    }
+</style>
+</head>
+<body>
+    <header>
+        
+    </header>
+    <nav class="nav">
+        <ul class="menu">
+            <li><a href="sam-jameh/index-form3.html"> <strong>سامانه جامع طرح های حمایتی مسکن</strong></a></li>
+            <li><a href="#">ثبت نام نهضت ملی مسکن</a></li>
+            <li><a href="darkhastha/index-form4.html">مشاهده درخواست متقاضی </a></li>
+            <li><a href="rahnama/index-form5.html">سئوالات متداول</a></li>
+            <li><a href="https://saman.mrud.ir/announcements">اخبار و اطلاعیه</a></li>
+            <li><a href="sharayet/index-form2.html"> شرایط</a></li>
+            <li><a href="#">تماس با ما</a></li>
+        </ul>
+    </nav>
+    <article class="container">
+        <form action="">
+            <article class="row">
+                <article class="col1">
+                    <label for="first-name">نام</label>
+                </article>
+                <article class="col2">
+                    <input type="text" id="first-name" name="first-name" required>
+                </article>
+            </article>
+            <article class="row">
+                <article class="col1">
+                    <label for="last-name">نام خانوادگی</label>
+                </article>
+                <article class="col2">
+                    <input type="text" id="last-name" name="last-name" required>
+                </article>
+            </article>
+            <article class="row">
+                <article class="col1">
+                    <label for="kodmile">کدملی</label>
+                </article>
+                <article class="col2">
+                    <input type="number" id="kodmile" name="kodmile" required>
+                </article>
+            </article>
+            <article class="row">
+                <article class="col1">
+                    <label for="date">تاریخ تولد:</label>
+                </article>
+                <article class="col2">
+                    <input type="date" id="date" name="date" size="2008-02-01" required>
+                </article>
+            </article>
+            <article class="row">
+                <article class="col1">
+                    <label for="father-name">نام پدر</label>
+                </article>
+                <article class="col2">
+                    <input type="text" id="father-name" name="father-name" required>
+                </article>
+            </article>
+            <article class="row">
+                <article class="col1">
+                    <label for="pic">آپلود عکس:</label>
+                </article>
+                <article class="col2">
+                    <input type="file" id="pic" name="pic" required>
+                </article>
+            </article>
+            <article class="row">
+                <article class="col1">
+                    <label for="email">آدرس ایمیل:</label>
+                </article>
+                <article class="col2">
+                    <input type="email" id="email" name="email" required>
+                </article>
+            </article>
+            
+            <article class="row">
+                <article class="col1">
+                    <label for="ostan">:استان</label>
+                </article>
+                <article class="col2">
+                    <select name="ostan" id="#">
+                        <option value="k-b">کهگیلویه و بویراحمد</option>
+                        <option value="tehran">تهران</option>
+                        <option value="shiraz">شیراز</option>
+                        <option value="esfahan">اصفهان</option>
+                        <option value="mashahd">مشهد</option>
+                        <option value="tabriz">تبریز</option>
+                        <option value="boshehr">بوشهر</option>
+                    </select>
+                </article>
+                <br>
+                <article class="col2">
+                    <select name="shahrestan" id="shahrestan">
+                        <option value="yasuj">یاسوج</option>
+                        <option value="tehran">تهران</option>
+                        <option value="abadeh">آباده</option>
+                        <option value="esfahan">اصفهان</option>
+                        <option value="mashahd">مشهد</option>
+                        <option value="tabriz">تبریز</option>
+                        <option value="boshehr">بوشهر</option>
+                    </select>
+                </article>
+            </article>
+            <article class="row">
+                <article class="col1">
+                    <label for="subject">توضیحات</label>
+                </article>
+                <article class="col2">
+                    <textarea name="subject" id="subject" cols="30" rows="10">توضیحات خود را بنویسید</textarea>
+                </article>
+            </article>
+            <br>
+            <article class="row">
+                <article class="col1">
+                    <label for="tahol">وصغیت تاهل:</label>
+                </article>
+                <article class="col1">
+                    <input type="radio" id="tahol" name="tahol" required>
+                    <label for="tahol">مجرد</label>
+                </article>
+                <article class="col1">
+                    <input type="radio" id="tahol" name="tahol" required>
+                    <label for="tahol">متاهل</label>
+                </article>
+            </article>
+            <article class="row">
+                <article class="col1">
+                    <label for="malek">نوع مالکیت:</label>
+                </article>
+                <article class="col1">
+                    <input type="checkbox" id="malek" name="malek" required>
+                    <label for="malek">دارای زمین مسکونی  </label>
+                </article>
+                <article class="col1">
+                    <input type="checkbox" id="tahol" name="tahol" required>
+                    <label for="tahol">فاقد زمین مسکونی</label>
+                </article>
+            </article>
+            <article class="row">
+                <article class="col1">
+                    <label for="user-name">نام کاربری:*</label>
+                </article>
+                <article class="col2">
+                    <input type="text" id="user-name" name="user-name" required>
+                </article>
+            </article>
+            <article class="row">
+                <article class="col1">
+                    <label for="pas">کلمه عبور:*</label>
+                </article>
+                <article class="col2">
+                    <input type="password" id="pas" name="pas" required>
+                </article>
+            </article>
+            <article>
+                <input type="submit" value="save">
+            </article>
+            <article>
+                <input type="reset" value="clear">
+            </article>
+            <br><br><br>
+        </form>
+    </article><br><br>
+    <footer>کلیه حقوق مادی و معنوی این سامانه نزد وزارت راه و شهرسازی محفوظ است.</footer>
+    <marquee behavior="" direction="rtl"> <strong>بسیاری از دولوپرهای خوب کدنویسی می‌کنند اما نَه به این خاطر که کسب درآمد کنن یا توسط دیگران تحسین بشن، بلکه به این خاطر که کدنویسی باحاله.</strong> </marquee>
+</body>
+</html>

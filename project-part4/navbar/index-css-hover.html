@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url(css-pseudo-classes-elements.jpg)
+        }
+        header{
+            width: 100%;
+            margin-top: 0px;
+            padding-top: 0px;
+            text-align: center;
+            color: rgb(255, 0, 0);
+            font-size: 25px;
+        }
+        nav{
+            background-color: rgb(48, 96, 151);
+            position: sticky;
+            top: 0px;
+            width: 100%;
+            font-size: 20px;
+            padding-right: 20px;
+        }
+        ul.menu li{
+            list-style-type: none;
+            display: inline-block; 
+            position: relative;
+        }
+        ul.menu>li>a{
+            display: inline-block;
+            text-decoration: none;
+            padding: 20px;
+            margin: 10px;
+            color: rgb(255, 255, 255);
+            border: 1px solid rgb(5, 5, 5);
+            border-radius:8px 5px;
+        }
+        ul.sub>li>a{
+            display: inline-block;
+            padding: 4px;
+            margin: 2px;
+            width: 100px;
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            border: 1px solid rgb(5, 5, 5);
+            border-radius:5px 6px;
+            background-color: rgb(17, 103, 184);
+            position: relative;
+        z-index: 1;
+        }
+
+            ul.menu li a:hover{
+            background-color: rgb(248, 250, 164) ;
+            border-bottom: 2px solid red;
+            color: black;
+        }
+        ul.sub{
+            display: none;
+            position:fixed;
+            padding: 0px;
+            margin: 0px;
+            z-index: 1;
+
+        }
+        ul.menu li:hover ul.sub{
+            display: block;
+            color: red;
+        }
+        ul.sub li{
+            display: block;
+            border-bottom: 1p solid red;
+            background-color: rgb(184, 173, 173);
+        }
+        .div-hover{
+            direction: rtl;
+            margin: 15px;
+            padding: 15px;
+            color: rgb(0, 0, 0);
+            border: 2px solid black;
+            width: 40%;
+            text-align: justify;
+            background-color: beige;
+            float: right;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display:inline-block;
+        }
+        .div-hover1{
+            direction: rtl;
+            margin: 15px;
+            padding: 15px;
+            color: rgb(0, 0, 0);
+            border: 2px solid black;
+            width:5%;
+            text-align: center;
+            background-color: beige;
+            float: right;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display:inline-block;
+            position: relative;
+            top: 40px;
+        }
+        .div-hover2{
+            direction:ltr;
+            margin: 15px;
+            padding: 15px;
+            color: rgb(0, 0, 0);
+            border: 2px solid black;
+            width:40%;
+            text-align: justify;
+            background-color: beige;
+            float:right;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display:inline-block;
+        }
+        .box {
+        margin: 30px;
+        width: 100px;
+        height: 100px;
+        background-color: rgb(0, 59, 253);
+        transform: rotate(0.8turn);
+        position: relative;
+        z-index: 1;
+        }
+        .box1 {
+        margin: 30px;
+        width: 100px;
+        height: 100px;
+        background-color: rgb(255, 0, 0);
+        transform: rotate(0.16turn);
+        }
+        .box1:hover{
+        position: relative;
+        bottom: 130px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Education: pseudo-classes</h1>
+    </header>
+    <nav class="nav">
+        <ul class="menu">
+            <li><a href="">Location pseudo-classes</a>
+            <ul class="sub" >
+                <li><a href="index-css-alink.html">:link</a></li>
+                <li><a href="index-css-visited.html">:visited</a></li>
+                <li><a href="index-css-target.html">:target</a></li>
+                <li><a href="index-css-target-within.html">:target-within</a></li>
+            </ul>
+            </li>
+            <li ><a href="">User action pseudo-classes</a>
+                <ul class="sub">
+                    <li><a href="index-enabled.html">:enabled</a></li>
+                    <li><a href="index-desabled.html">:disabled</a></li>
+                    <li><a href="index-checked.html">:checked</a></li>
+                    <li><a href="index-in-range.html">:in-range</a></li>
+                </ul>
+                </li>
+                <li ><a href="">Tree-structural pseudo-classes</a>
+                <ul class="sub">
+                    <li><a href="index-css-empaty.html">:empty</a></li>
+                    <li><a href="index-css-nth-childd.html">:nth-child</a></li>
+                    <li><a href="index-nth-last-child.html">:nth-last-child</a></li>
+                    <li><a href="index-first-child.html">:first-child</a></li>
+                    <li><a href="index-nth-last-child.html">:last-child</a></li>
+                    <li><a href="index-only-child.html">:only-child</a></li>
+                    <li><a href="index-nth-of-type.html">:nth-of-type</a></li>
+                </ul>
+            </li>
+            <li ><a href="">Tree-structural pseudo-classes</a>
+            <ul class="sub">
+                <li><a href="index-css-empaty.html">:empty</a></li>
+                <li><a href="index-css-nth-childd.html">:nth-child</a></li>
+                <li><a href="index-nth-last-child.html">:nth-last-child</a></li>
+                <li><a href="index-first-child.html">:first-child</a></li>
+                <li><a href="">:last-child</a></li>
+                <li><a href="">:only-child</a></li>
+                <li><a href="">:nth-of-type</a></li>
+                <li><a href="">:nth-last-of-type</a></li>
+                <li><a href="">:first-of-type</a></li>
+                <li><a href="">:last-of-type</a></li>
+                <li><a href="">:only-of-type</a></li>
+            </ul>
+            </li>
+            <li><a href="../index-css.html">Home</a></li>>
+        </ul>
+    </nav>
+    <div class="div-hover">
+        <h2>hover:</h2>
+        <p>زمانی مطابقت دارد که کاربر یک مورد را با یک دستگاه اشاره گر تعیین می کند، به عنوان مثال نشانگر ماوس را روی آن نگه می دارد.</p>
+        <p>شبه کلاس :hover CSS زمانی مطابقت دارد که کاربر با یک عنصر با یک دستگاه اشاره گر تعامل داشته باشد، اما لزوماً آن را فعال نمی کند. معمولاً زمانی که کاربر با مکان نما (نشانگر ماوس) روی یک عنصر قرار می گیرد، فعال می شود.</p>
+        <p>سبک‌های تعریف‌شده توسط کلاس شبه :hover توسط هر شبه کلاس مرتبط با پیوند بعدی (:link، :visited، یا :active) که حداقل ویژگی یکسانی دارد، لغو می‌شوند. برای استایل دهی مناسب به پیوندها، قانون :hover را بعد از قوانین :link و :visited اما قبل از :active قرار دهید، همانطور که توسط LVHA-order: :link — :visited — :hover — :active تعریف شده است.</p>
+    </div>
+    <div class="div-hover1">
+        <h2>مثال&lArr;</h2>
+    </div>
+    <div class="div-hover2">
+            <div class="box"></div>
+            <div class="box1"></div>
+        </div>
+    </div>
+</body>
+</html>
